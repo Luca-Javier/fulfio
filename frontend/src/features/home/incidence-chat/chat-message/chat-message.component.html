@@ -1,0 +1,12 @@
+<div class="messages-container">
+
+
+  <div [class]="['message',getSideClass(message.userId)]" *ngFor="let message of messages">
+    <img [src]="message.userImage" alt="user avatar" onerror="this.src='assets/anonim-user.svg'">
+    <div class="message-content">
+      <p class="user-name">{{message.name}}</p>
+      <p>{{message.message}}</p>
+    </div>
+  </div>
+
+</div>

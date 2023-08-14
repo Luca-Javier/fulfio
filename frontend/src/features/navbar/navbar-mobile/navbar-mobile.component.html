@@ -1,0 +1,8 @@
+<nav class="container">
+  <a [routerLink]="link.href" routerLinkActive="active" class="link" *ngFor="let link of navbarLinks; index as i">
+    <img [src]="link.src" [alt]="link.label" />
+    <img class="hover-image" [src]="getNavbarLinkHover(i)" [alt]="link.label" />
+
+    <span>{{ link.label }}</span>
+  </a>
+</nav>

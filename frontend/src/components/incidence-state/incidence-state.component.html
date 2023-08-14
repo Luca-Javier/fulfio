@@ -1,0 +1,13 @@
+<div [ngSwitch]="state">
+
+  <div *ngSwitchCase="'pending'" class="content pending">
+    <img src="assets/pending-incidence-state.svg" alt="pending icon">
+    <p>Pendiente</p>
+  </div>
+
+  <div *ngSwitchDefault class="content resolved">
+    <img src="assets/resolved-incidence-state.svg" alt="resolved icon">
+    <p>Resuelta</p>
+  </div>
+
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <h3>Regístrate</h3>
+  <p [class]="[registerResponse,'succes-response']">Te has registrado correctamente</p>
+  <p [class]="[registerResponse,'error-response']">Ha ocurrido un error</p>
+
+  <label for="email">Correo:
+    <input type="email" id="email" placeholder="example@gmail.com" [(ngModel)]="email">
+  </label>
+  <label for="passoword">Contraseña:
+    <input type="password" id="passoword" placeholder="Contraseña..." [(ngModel)]="password">
+  </label>
+
+  <label for="name">Nombre:
+    <input type="text" id="name" placeholder="Example" [disabled]="!isRegistering" [(ngModel)]="name">
+  </label>
+  <label for="register">
+    <input type="checkbox" id="register" (change)="toggleRegister()">
+    Registrarse
+  </label>
+
+
+  <div class="buttons">
+    <button (click)="close()" class="button-close">Cancelar</button>
+    <button (click)="confirm()" class="button-confirm">Confirmar</button>
+  </div>
+
+</div>

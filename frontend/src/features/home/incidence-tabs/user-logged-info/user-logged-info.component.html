@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Change image</h3>
+
+
+
+  <label for="file" *ngIf="!selectedImageSrc">
+    <p>Subí tu imagen</p>
+    <input type="file" id="file" hidden (change)="handleImage($event)">
+  </label>
+
+  <img *ngIf="selectedImageSrc" [src]="selectedImageSrc" alt="avatar selected">
+
+
+  <div class="buttons">
+    <button class="cancel" *ngIf="selectedImageSrc" (click)="removeImage()">Cancel</button>
+    <button class="update" (click)="updateImage()">Actualizar</button>
+  </div>
+
+</div>

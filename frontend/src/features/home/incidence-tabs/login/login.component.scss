@@ -1,0 +1,81 @@
+h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+
+  input {
+    margin-top: 0.5rem;
+  }
+}
+
+.succes-response {
+  color: green;
+  text-align: center;
+  display: none;
+
+  &.succes {
+    display: block;
+  }
+}
+
+.error-response {
+  color: red;
+  text-align: center;
+  display: none;
+
+  &.error {
+    display: block;
+  }
+}
+
+input {
+  padding: 0.5rem;
+  border: none;
+  border-bottom: thin solid black;
+  outline: none;
+
+  &:disabled {
+    background-color: #c2c2c2;
+  }
+}
+
+[for="register"] {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+
+  button {
+    flex: 1;
+    padding: 0.7rem 1.5rem;
+    transition: transform 0.2s ease-in-out;
+    outline: none;
+    border-radius: 25px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+  }
+}
+
+.button-close {
+  background-color: transparent;
+  border: thin solid black;
+}
+
+.button-confirm {
+  background-color: var(--third-color);
+  color: white;
+  border: none;
+}

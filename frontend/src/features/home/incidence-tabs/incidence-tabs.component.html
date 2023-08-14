@@ -1,0 +1,23 @@
+<div class="container">
+
+  <article>
+
+    <h3>Incidencias</h3>
+
+    <div class="tabs-container">
+      <a routerLink="on-course" routerLinkActive="active">En curso</a>
+      <a routerLink="resolved" routerLinkActive="active">Resueltas</a>
+    </div>
+  </article>
+
+  <div class="avatar-container" (click)="openUserInfo()">
+    <img [src]="[image]" onerror="this.src='assets/anonim-user.svg'" alt="user">
+    <p>{{sessionData.name}}</p>
+    <modal>
+      <app-login *ngIf="!isLogged"></app-login>
+      <app-user-logged-info *ngIf="isLogged"></app-user-logged-info>
+    </modal>
+  </div>
+
+</div>
+<input type="search" name="search" placeholder="Search">

@@ -1,0 +1,18 @@
+<div [ngSwitch]="type">
+
+  <div *ngSwitchCase="'duda'" class="content duda">
+    <img src="assets/doubt-incidence-type.svg" alt="doubt icon">
+    <p>Duda</p>
+  </div>
+
+  <div *ngSwitchCase="'pedido'" class="content delivery">
+    <img src="assets/delivery-incidence-type.svg" alt="delivery icon">
+    <p>Pedido</p>
+  </div>
+
+  <div *ngSwitchDefault class="content integration">
+    <img src="assets/integration-incidence-type.svg" alt="integration icon">
+    <p>Integración</p>
+  </div>
+
+</div>

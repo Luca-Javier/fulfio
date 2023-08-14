@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div class="title">
+
+    <p (click)="closeChat()">
+      ⬅
+    </p>
+
+    <article>
+      <h2>{{incidenceData.title}}</h2>
+      <p>{{lastTime}}</p>
+    </article>
+
+    <incidence-type></incidence-type>
+  </div>
+
+  <div class="chat">
+    <chat-messages [incidenceId]="incidenceData.id"></chat-messages>
+  </div>
+
+
+  <div class="input">
+
+    <textarea placeholder="Escribe un mensaje..."></textarea>
+
+    <div class="buttons">
+      <custom-button>
+        <img src="assets/attach-button-icon.svg" alt="attach file icon">
+      </custom-button>
+
+      <custom-button>
+        <img src="assets/send-button-icon.svg" alt="send icon">
+        <span>Enviar</span>
+      </custom-button>
+    </div>
+
+  </div>
+
+</div>

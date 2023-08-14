@@ -1,0 +1,41 @@
+<div #container [class]="['container',isMobileWidth]">
+
+  <div class="titles">
+    <p>NUMERO DE INCIDENCIA</p>
+    <p>MENSAJE</p>
+    <p style="margin-right: 2rem;">ESTADO</p>
+  </div>
+
+  <div class="incidence-with-chat-container">
+
+    <div class="incidences" #incidencesContainer>
+      <div *ngFor="let incidence of incidences" class="incidence-container" (click)="openChat(incidence)">
+
+        <div class="title-container">
+
+          <article>
+            <h4>{{incidence.title}}</h4>
+            <p class="last-time">{{getLastTime(incidence.lastInteraction)}}</p>
+          </article>
+
+          <incidence-type [type]="incidence.type"></incidence-type>
+
+        </div>
+
+        <p class="first-message">
+          {{incidence.firstMessage}}
+        </p>
+
+
+        <incidence-state [state]="incidence.state"></incidence-state>
+
+      </div>
+    </div>
+
+    <incidence-chat (closeChatEvent)="closeChat()" *ngIf="chatData !== null"
+      [incidenceData]="chatData"></incidence-chat>
+
+  </div>
+
+
+</div>

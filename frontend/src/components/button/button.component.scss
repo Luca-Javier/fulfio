@@ -1,0 +1,22 @@
+button {
+  background-color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  outline: none;
+  border: none;
+
+  * {
+    color: inherit;
+  }
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}

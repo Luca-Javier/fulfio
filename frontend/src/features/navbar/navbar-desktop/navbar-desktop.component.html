@@ -1,0 +1,10 @@
+<aside class="container">
+  <h1>fulfio</h1>
+
+  <nav class="link-container">
+    <a [routerLink]="[link.href]" routerLinkActive="active" class="link" *ngFor="let link of navbarLinks">
+      <img [src]="link.src" [alt]="link.label">
+      <span>{{ link.label }}</span>
+    </a>
+  </nav>
+</aside>

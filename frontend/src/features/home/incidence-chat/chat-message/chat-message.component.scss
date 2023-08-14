@@ -1,0 +1,42 @@
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.message {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  width: fit-content;
+
+  .message-content {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  &.right-side {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+  }
+
+  p {
+    color: var(--light-gray);
+    margin: 0;
+  }
+
+  .user-name {
+    color: black;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  img[alt="user avatar"] {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  justify-content: center;
+  background-color: white;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.hover-image {
+  display: none;
+}
+
+.link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+
+  span {
+    font-size: 11px;
+  }
+
+  &:hover,
+  &.active {
+    transform: scale(1.1);
+    color: var(--third-color);
+    fill: var(--third-color);
+
+    img:first-child {
+      display: none;
+    }
+    .hover-image {
+      display: block;
+    }
+  }
+}
+
+img,
+svg {
+  width: 20px;
+  height: 20px;
+}
