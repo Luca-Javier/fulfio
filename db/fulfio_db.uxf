@@ -1,0 +1,27 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>460</y><w>210</w><h>170</h></coordinates><panel_attributes>incidences
+--
+id
+active
+id_user
+title
+first_message
+upload_time
+last_interaction_time
+type
+resolved</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>260</y><w>210</w><h>140</h></coordinates><panel_attributes>users
+--
+id
+email
+active
+name
+password
+iv
+is_admin</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>340</y><w>210</w><h>160</h></coordinates><panel_attributes>messages
+-
+id
+active
+incidence_id
+user_id
+message
+upload_time
+image</panel_attributes><additional_attributes></additional_attributes></element></diagram>
